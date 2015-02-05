@@ -1,8 +1,12 @@
 var app = angular.module('quoteBook');
 
-app.controller('mainCtrl', function($scope){
+app.controller('MainController', function($scope, 'mainService'){
 
-	$scope.test = "Rocky"
+	$scope.getData = function(){
+		$scope.object = mainService.getData();
+	};
+
+}
 
 
 });

@@ -16,12 +16,12 @@ app.service('mainService', function(){
   };
 
   this.addData = function(data) {
-	quotes.push({text: data.text, author: data.author})
+	quotes.push(data);
   };
 
   this.removeData = function(quote) {
   	for(var i = 0; i < quotes.length; i++){
-  		if(quotes[i].text === quote) {
+  		if(quotes[i].text === quote.text) {
   			quotes.splice(i, 1);
   			i--;
   		}
